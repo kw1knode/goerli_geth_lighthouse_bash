@@ -32,9 +32,7 @@ WantedBy=default.target" >> /etc/systemd/system/geth.service \
 
 sudo mkdir -p /var/lib/jwtsecret
 openssl rand -hex 32 | sudo tee /var/lib/jwtsecret/jwt.hex > /dev/null
-sudo systemctl daemon-reload
-sudo systemctl start geth
-sudo systemctl enable geth
+
 
 cd ~
 curl -LO https://github.com/sigp/lighthouse/releases/download/v3.1.0/lighthouse-v3.1.0-x86_64-unknown-linux-gnu.tar.gz
