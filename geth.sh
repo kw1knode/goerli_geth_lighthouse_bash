@@ -25,7 +25,7 @@ ExecStart=/usr/local/bin/geth \
   --goerli \
   --datadir /var/lib/geth \
   --authrpc.jwtsecret /var/lib/jwtsecret/jwt.hex \
-  --http
+  --http \
   --http.api personal,eth,net,web3 \
   --metrics \
   --metrics.addr 127.0.0.1
